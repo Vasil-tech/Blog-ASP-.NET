@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Blog_ASP.NET.Models.ArticlesModel>
+
+@{
+    ViewBag.Title = "Статьи с сайта";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@foreach (var item in Model) {
+    <div class="jumbotron mt-3">
+        <h1>@Html.DisplayFor(model => item.title)</h1>
+        <p class="lead">@Html.DisplayFor(model => item.intro)</p> 
+        <p class="lead"><b>Автор: </b>@Html.DisplayFor(model => item.author)</p>
+        <p class="btn btn-lg btn-primary" href="" role="button">Читать далее </p> 
+    </div>
+}
